@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <meta name="author" content="Ajay">
+    <meta name="discription" content="this is a website for a local sweet selling bussiness. And this is About page.">
+    <meta nam="keyword" content="mithai, jalebi, barfi, sweet">
+    <link rel="icon" href="mithai2.jpg">
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <link rel="stylesheet" href="mithaiWala.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<!-- 
+    1)give call for action and active offers on every page as popups
+ -->
+
+<body>
+
+    <div id="since">
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" target="blank">Home</a></li>
+                <li><a href="about.html" target="parent">About</a></li>
+                <li><a href="review.html" target="blank">Review us</a></li>
+                <li><a href="bookhtml.html" target="blank">Book Sweets</a></li>
+                <li><a href="weddingBook.html" target="blank">Book for wedding</a></li>
+                <!-- <li><a href="blog.html" target="blank">Blogs</a></li> -->
+            </ul>
+        </nav><br><br>
+        <h1 align="center" style="font-family: cursive;font-weight: bold;margin:30px;">About MithaiWala</h1>
+        <span id="sinc">
+            <h1>A Legacy of Exellence and trust </h1><br>
+            <h2 id="s95">Since 1995</h2>
+        </span>
+
+    </div>
+
+    <main>
+        <div id="container_about">
+
+
+
+            <div id="who" style="resize: both;border: 1px solid black;padding: 10px;">
+                <h2 style="text-shadow: 3px 3px 5px white,5px 5px 5px black;">Who we are?</h2><br>
+                <p>We are a shining milestone in the history of sweet sellers. We are know for our execellent and
+                    customer first services and products. We are running<span class="id"> </span> this Bussiness since 1995. Almost <span id="age1"> </span> year past and we
+                    have served thousands of happy customers and have<span class="id"> </span>  provided our services in almost 1200 weddings. </p>
+                <p>We are certified for our hygienic conditions<span class="id"> </span>  and customer satisfaction. We are being trusted for more
+                    than <span id="age2"> </span> years, and are proud to deliver our services to people.</p>
+                <!-- as year is provided static so have to modify every year, hence replace  by a javaScript variable which tell age -->
+                <script>
+                    var since = new Date();
+                    since.setFullYear(1995);
+
+                    var today = new Date();
+
+                    let age = parseInt((today - since)/(1000 * 60 * 60 * 24 * 365));
+
+                    document.getElementById('age1').innerHTML =  age;
+                    document.getElementById('age2').innerHTML =  age;
+
+                    // check why class name not  and tag name working.
+
+                </script>
+
+            </div>
+            <div id="sell" style="resize: both;border: 1px solid black;padding: 10px;">
+                <h1 style="text-shadow: 3px 3px 5px white,5px 5px 5px black;">What service we provide:</h2><br>
+                    <li>Home delivery of Sweets</li>
+                    <li>Booking for Weddings</li>
+                    <li>Special festival orders for sweets and cakes.</li>
+            </div>
+            <br>
+            <!-- <img src="mithai2.jpg" style="-webkit-box-reflect: bottom 10px;"> -->
+
+            
+            <!-- box reflect also not working and nonstandard don't use -->
+            <!-- check why resize not working and try in form -->
+            <div id="speciality" style="resize: vertical;border: 1px solid black;padding: 10px;">
+                <h1 style="text-shadow: 3px 3px 5px white,5px 5px 5px black;">We promise you to:</h1><br>
+                <li>Deliver best services</li>
+                <li>Deal with any trouble if you have any.</li>
+                <li>To make you feel delight with our delicious food.</li>
+                <li>A fisible discount on exciting ocassions.</li>
+            </div><br>
+
+    </main>
+
+    <footer style="text-align: center; background-color: rgb(0, 9, 0,0.4);padding:50px;margin:10px;">
+        <h5 style="font-size: larger;">In case of any inquery please contact us or reach our shop</h5>
+        <p><strong> +091 - 1800 - 1873 -1732</strong> </p><br>
+        <p><a href="mailto:ajal@232.gmail.com">mail on: ajal@232.gmail.com </a></p><br>
+        <address>
+            A-87/24,<br>
+            lodhi road, New Delhi<br>
+            New Delhi - 110045
+        </address>
+
+    </footer>
+    </div>
+
+    </div>
+</body>
+
+</html>

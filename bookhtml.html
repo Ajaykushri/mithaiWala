@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Sweets</title>
+    <meta name="author" content="Ajay">
+    <meta name="discription" content="this is a website for a local sweet selling bussiness. And this is About page.">
+    <meta nam="keyword" content="mithai, jalebi, barfi, sweet">
+    <link rel="icon" href="mithai2.jpg">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <link rel="stylesheet" href="mithaiWala.css">
+    <style>
+        @media screen and (max-width:412px) {
+            a[href="bookhtml.html"] {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<!-- 
+    add menu decorated here which appear on ckicking a btn
+    add what want, how much so price calculated and ask for address and cod. when enter what want onclick popup address page and
+    then ask add and ensure a confirmation message for booking when you confirm.
+    
+ -->
+
+<body>
+    <div id="since">
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" target="blank">Home</a></li>
+                <li><a href="about.html" target="parent">About</a></li>
+                <li><a href="review.html" target="blank">Review us</a></li>
+                <li><a href="bookhtml.html" target="blank">Book Sweets</a></li>
+                <li><a href="weddingBook.html" target="blank">Book for wedding</a></li>
+                <!-- <li><a href="blog.html" target="blank">Blogs</a></li> -->
+            </ul>
+        </nav><br><br>
+        <h1 align="center" style="font-family: cursive;font-weight: bold;margin:30px;">Sweet and cake Booking counter
+        </h1>
+
+    </div>
+    <button type="button" style="float: right;" class="btn"
+        onclick="document.getElementById('menu').style.display = 'block';document.getElementById('close').style.display = 'block';">Menu</button>
+
+
+
+    <div id="form_book" style="display: flex;flex-direction:column; justify-content: space-around;align-items: space-around; padding:20px;
+    ">
+        <form action="#" method="get" target="blank"
+            onsubmit="alert('Your order is processing! You will soon recieve confirmation message.')" autocomplete="on"
+            name="f1">
+            <fieldset>
+                <legend>
+                    <h2>Step1</h2>
+                </legend>
+                <div class="form_input">
+                    <h2>What do you want ?</h2><br><br>
+                    <label for="item">
+                        Add Item from the menu:
+                        <input type="text" name="item" id="item" required
+                            onclick="document.getElementById('close').style.display = 'block';document.getElementById('menu').style.display='block';"
+                            placeholder="Click to check menu">
+                    </label>
+                    <br><br>
+                    <label for="howMuch">
+                        How Much kgs: <input type="number" name="quantity" id="howMuch" required>
+                    </label>
+                    <br><br>
+
+                    <label for="total">
+                        Your Total: <input type="text" onmouseover="hi()" id="total" name="totalMoney" readonly>
+                    </label>
+
+                    <script>
+                        function hi() {
+                            var item = document.f1.item.value;
+                            var five = document.f1.quantity.value;
+
+                            if (item == 'Jalebi') {
+                                document.f1.totalMoney.value = "INR " + 200 * five + " Rupees only!";
+                            } else if (item == 'Rosogulla') {
+                                document.f1.totalMoney.value = "INR " + 240 * five + " Rupees only!";
+                            } else if (item == 'Laddoo') {
+                                document.f1.totalMoney.value = "INR " + 200 * five + " Rupees only!";
+                            } else if (item == 'Barfi') {
+                                document.f1.totalMoney.value = "INR " + 370 * five + " Rupees only!";
+                            } else if (item == 'Coconut laddo') {
+                                document.f1.totalMoney.value = "INR " + 260 * five + " Rupees only!";
+                            } else if (item == 'Chocolate cake') {
+                                document.f1.totalMoney.value = "INR " + 350 * five + " Rupees only!";
+                            } else if (item == 'Gajar ka Halue') {
+                                document.f1.totalMoney.value = "INR " + 500 * five + " Rupees only!";
+                            }
+
+
+                        }
+                    </script>
+
+                    <br><br>
+
+                    <label for="mopay">
+                        Mode of Payment: <input type="text" name="mopay" id="mopay" readonly value="Cash on delievry">
+                    </label>
+                    <br><br>
+                    <label for="confirm">
+                        Confirm order: <select id="select">
+                            <option value="Confirm your order" aria-readonly="true">Confirm your order</option>
+                            <option value="YES">YES</option>
+                            <option value="no">Decline</option>
+                        </select><br><br>
+
+                    </label>
+                    <br><br>
+                    <button type="reset" class="btn">Refresh</button>
+                </div>
+            </fieldset>
+        </form><br>
+        <br><br>
+
+        <form action="#" method="post" target="blank" autocomplete="on">
+            <fieldset>
+                <legend>
+                    <h2> Step2 </h2>
+                </legend>
+                <div class="form_input">
+
+                    <h2>Where do you receive oreder ?</h2><br><br>
+                    <label for="house">
+                        House/Plot no: <input type="text" id="house" name="house">
+                    </label>
+                    <br><br>
+
+                    <label for="nearby">
+                        Near by: <input type="text" id="nearby" name="nearby" required>
+                    </label><br><br>
+
+                    <label for="area">
+                        BLK/Area/locality: <input type="text" name="area" id="area"
+                            placeholder="like: blk-A, Rohini....." required>
+                    </label><br><br>
+
+                    <label for="city">
+                        City: <input type="text" id="city" name="city" required list="citylist">
+                        <datalist id="citylist">
+                            <option value="New Delhi">New Delhi</option>
+                            <option value="Lakhnow"></option>
+                            <option value="Noida"></option>
+                            <option value="Gurugram"></option>
+                            <option value="Chandigarh"></option>
+                        </datalist>
+
+
+                    </label>
+                    <br><br>
+                    <label for="pin">
+                        Pincode: <input type="text" maxlength="6" id="pin" name="pin" required>
+                    </label>
+                    <br><br>
+                    <button type="reset" class="btn">Refresh</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <form action="#" method="post" target="blank" autocomplete="on">
+            <fieldset>
+                <legend>
+                    <h1>Step3</h1>
+                </legend>
+                <div class="form_input">
+                    <h2>How will we conctact you ?</h2><br><br>
+
+                    <label for="contact-no">Enter your contact-no:
+                        <input type="tel" id="contact-no" name="phoneNo" required>
+
+                    </label>
+                    <br><br>
+                    <label for="alternative">
+                        Alternative Contact-no: <input placeholder="(optional)" type="tel" id="alternative" name="alt"
+                            optional>
+                    </label>
+
+                    <br><br>
+                    <label for="email">Email id:
+                        <input type="email" id="email" name="mail" placeholder="@mail.com" required>
+                    </label><br><br>
+
+                </div>
+
+            </fieldset>
+
+            <input type="submit" class="btn" name="order" value="Confirm order">
+            <button type="reset" class="btn">Refresh</button>
+
+        </form>
+
+
+        <div id="menu">
+            <span id="close"
+                onclick="document.getElementById('menu').style.display = 'none'; document.getElementById('close').style.display = 'none';"
+                style="display:none;text-align:center;z-index:1;position:fixed;left:93vw;bottom:80vh;border:1px solid black;cursor:pointer;font-size:10px;font-family:cursive;width: 19px;">X</span>
+
+
+            <table>
+
+
+                <!-- creating table this way mean always will need to update from here the list so use javascript to make it ddynamic -->
+                <thead>
+                    <tr>
+                        <th colspan="5" style="position: relative;">
+                            <h1><u>Menu </u> </h1><br>
+                        </th>
+
+                    </tr>
+
+
+                    <tr>
+                        <th>Serial no.</th>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Prchase</th>
+                    </tr>
+                </thead>
+                <tbody id="tdata">
+                    <tr>
+                        <td>1</td>
+                        <td id="r1">Jalebi</td>
+                        <td>It's sweet, tasty and crispy. Dipped in chasni and smells wonderfull.</td>
+                        <td>&#8377 200 per kg</td>
+                        <td><input type="button" class="btn" name="add" value="Add to cart" onclick="add1()"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td id="r2">Rosogulla</td>
+                        <td>A delicious desert to have after your meal. Dipped in chasni, spongy and tasty</td>
+                        <td>&#8377 240 per kg</td>
+                        <td><input type="button" class="btn" name="add" value="Add to cart" onclick="add2()"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td id="r3">Laddoo</td>
+                        <td>A round sweet, made of besan. sugary and tasty.</td>
+                        <td>&#8377 200 per kg</td>
+                        <td><input type="button" class="btn" name="add" value="Add to cart" onclick="add3()"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td id="r4">Barfi</td>
+                        <td>A sweet dish, made of khoya. Delicious.</td>
+                        <td>&#8377 370 per kg</td>
+                        <td><input type="button" class="btn" name="add" value="Add to cart" onclick="add4()"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td id="r5">Coconut laddo</td>
+                        <td>A sugary desert, made up of coconut as main ingridient.</td>
+                        <td>&#8377 260 per kg</td>
+                        <td><input type="button" class="btn" name="add" value="Add to cart" onclick="add5()"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td id="r6">Chocolate cake</td>
+                        <td>A chocolate cake with bread and egg as ingrdient.</td>
+                        <td>&#8377 350 per kg</td>
+                        <td><input type="button" class="btn" name="add" value="Add to cart" onclick="add6()"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td id="r7">Gajar ka Halua</td>
+                        <td>Caret as main ingridient a nice option for desert and parties.</td>
+                        <td>&#8377 500 per kg</td>
+                        <td><input type="button" class="btn" name="add" value="Add to cart" onclick="add7()"></td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div><br>
+        <!-- 
+
+    user can order only 1 item now so make a cart wher he can add multiple item and remove and make final purchase. do it with frame work.
+ -->
+        <script>
+
+
+            function add1() {
+                var r1 = document.getElementById('r1').innerHTML;
+                var item = document.f1.item;
+
+                item.value = r1;
+
+
+                document.getElementById('menu').style.display = 'none';
+                document.getElementById('close').style.display = 'none';
+
+            }
+            function add2() {
+                var r2 = document.getElementById('r2').innerHTML;
+                var item = document.f1.item;
+
+                item.value = r2;
+
+
+                document.getElementById('menu').style.display = 'none';
+                document.getElementById('close').style.display = 'none';
+
+            }
+            function add3() {
+                var r3 = document.getElementById('r3').innerHTML;
+                var item = document.f1.item;
+
+                item.value = r3;
+
+
+                document.getElementById('menu').style.display = 'none';
+                document.getElementById('close').style.display = 'none';
+
+            }
+            function add4() {
+                var r4 = document.getElementById('r4').innerHTML;
+                var item = document.f1.item;
+
+                item.value = r4;
+
+
+                document.getElementById('menu').style.display = 'none';
+                document.getElementById('close').style.display = 'none';
+
+            }
+            function add5() {
+                var r5 = document.getElementById('r5').innerHTML;
+                var item = document.f1.item;
+
+                item.value = r5;
+
+
+                document.getElementById('menu').style.display = 'none';
+                document.getElementById('close').style.display = 'none';
+
+            }
+            function add6() {
+                var r6 = document.getElementById('r6').innerHTML;
+                var item = document.f1.item;
+
+                item.value = r6;
+
+
+                document.getElementById('menu').style.display = 'none';
+                document.getElementById('close').style.display = 'none';
+
+            }
+            function add7() {
+                var r7 = document.getElementById('r7').innerHTML;
+                var item = document.f1.item;
+
+                item.value = r7;
+
+
+                document.getElementById('menu').style.display = 'none';
+                document.getElementById('close').style.display = 'none';
+
+            }
+            function add7() {
+                var r7 = document.getElementById('r7').innerHTML;
+                var item = document.f1.item;
+
+                item.value = r7;
+
+
+                document.getElementById('menu').style.display = 'none';
+                document.getElementById('close').style.display = 'none';
+
+            }
+
+
+
+            // find out how to get value from a child node then write it.
+
+        </script>
+
+        <!-- make them hidden and only owner can access it so secure it with password -->
+        <!--  addding data in menu is work of backend. so if needed learn or just use coding -->
+        <!-- <script>
+           window.addEventListener('click', function(ev){if(ev.target.button !== getElementById('menu').style.display = 'none';document.getElementById('close').style.display = 'none'});
+       </script> -->
+
+        <!-- 
+           window onclick working fine but even onclicking on btn it is dispearing; rectify this then include
+        -->
+
+</body>
+
+</html>

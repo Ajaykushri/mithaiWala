@@ -1,0 +1,66 @@
+    <div id="update-list" style="border: 1px solid black;padding:10px;background-color: black;color:white;">
+            <form  name="form">
+            <span class="input_">Item serial number: </span>
+            <input id="s.no" name="sNo" type="number" required><br>
+
+            <br> <span class="input_">Item to add: </span>
+            <input id="itemadded" name="itemAdd" type="text" required><br><br>
+
+            <span class="input_">Add description:</span>
+            <input id="description" name="desc" type="text" required>
+            <br><br>
+
+            <span class="input_">Add current Price:</span>
+            <input type="text" id="price" name="price" required><br><br>
+
+            <span id="available">Is Available:</span>
+            <!-- <input type="radio" id="yes" name="yes" value="yes"> <span class="input_">Yes</span>
+            <input type="radio" id="no" name="yes" value="no"><span class="input_">No</span>
+            <br><br> 
+            check how to get value from radio btn. -->
+        <input type="text" id="avl" name="available" name="yes" required ><br><br>
+            <button class="btn" type="button" onclick="update_list()">Update List</button>
+
+        </form>
+
+        </div>
+    </div>
+    <script>
+        
+        
+        //     ev.perventDefault();
+        //     var iS = document.getElementById('s.no').value;
+        // var ita = document.getElementById('itemadded').value;
+        // var des = document.getElementById('description').value;
+        // var price = document.getElementById('price').value;
+        // var available = document.getElementById('avl').value;
+
+        // this is good way but for form another way is best, must learn and practive dom
+
+        
+        //  document.form name.inputName.value; try this
+        function update_list(){
+            let sNo = document.form.sNo.value;
+        let item = document.form.itemAdd.value;
+        let desc = document.form.desc.value;
+        let price = document.form.price.value;
+        let avail = document.form.available.value;
+        
+        
+        let row = document.createElement('tr');
+        let data1 = row.appendChild(document.createElement('td'));
+        let data2 = row.appendChild(document.createElement('td'));
+        let data3 = row.appendChild(document.createElement('td'));
+        let data4 = row.appendChild(document.createElement('td'));
+        let data5 = row.appendChild(document.createElement('td'));// td in '' else won't except
+
+        data1.innerHTML = sNo;
+        data2.innerHTML = item;
+        data3.innerHTML = desc;
+        data4.innerHTML = price;
+        data5.innerHTML = avail;
+
+      return  document.getElementById('tdata').appendChild(row);
+        }
+    
+    </script>

@@ -1,0 +1,59 @@
+@media screen and (max-width:1270px) and (min-width:1045px){
+    *{overflow-x: hidden;}
+    header{
+        background-size: auto 400px, 400px 380px,auto 440px;margin: 0px; 
+        height: 33vw;
+    }
+    #wel_{padding:5px;top:1vh;left:50vw;height:250px;width:350px;}
+    /* #welcome-img{position:absolute;top:1vw;height: 100px;} */
+ }
+ /* to take media on a slot define with slot with or and and. */
+ @media screen and (max-width:1044px) and (min-width:875px){
+    .container{
+        width:138vw;
+     }
+        
+        #wel_{padding:5px;top:1vh;left:50vw;height:250px;width:350px;}
+        #welcome_text{
+            background-color: rgba(29, 15, 15,0.4);
+            margin: 10px;font-size:20px;position:relative;left:1px;z-index: 2;
+        }
+ }
+
+ @media screen and (max-width:873px){
+     #special{overflow-x: scroll;}
+    #why{display: none;}
+    .btn{overflow-y: hidden;}
+    #p1{display:none}
+    
+    nav{overflow-y: hidden;}
+    #welcome_text{
+        background-color: rgba(29, 15, 15,0.7);
+        position:relative;top:1px;z-index: 2;font-size:10px;
+    }
+     .container{
+        width:138vw;
+     }
+     header{
+         border-radius: 0 0 350px;
+         background-size: auto 400px, 400px 380px,400px 440px;margin: 0px; 
+       
+     }
+     #welcome_img{
+         display: none;
+     }
+     #h1{padding:40px;}
+     
+ }
+
+
+ @media screen and (max-width:568px){
+     #s95{display: none;}
+     a[href="about.html"]{display: none;}
+ }
+
+
+ 
+
+
+ 

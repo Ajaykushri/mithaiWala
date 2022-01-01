@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="author" content="Ajay">
+    <meta name="discription" content="this is a website for a local sweet selling bussiness. And this is About page.">
+    <meta nam="keyword" content="mithai, jalebi, barfi, sweet">
+    <link rel="icon" href="mithai2.jpg">
+    <!-- <meta http-equiv="refresh" content="4"> -->
+    <!-- remove it -->
+    <link rel="stylesheet" href="mithaiWala.css">
+    <style>
+        @media screen and (max-width:587px){
+            *{overflow-x: hidden;}
+        }
+    </style>
+</head>
+
+<body>
+    <div id="since">
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" target="blank">Home</a></li>
+                <li><a href="about.html" target="parent">About</a></li>
+                <li><a href="review.html" target="blank">Review us</a></li>
+                <li><a href="bookhtml.html" target="blank">Book Sweets</a></li>
+                <li><a href="weddingBook.html" target="blank">Book for wedding</a></li>
+                <!-- <li><a href="blog.html" target="blank">Blogs</a></li> -->
+            </ul>
+        </nav><br><br>
+        <h1 align="center" style="font-family: cursive;font-weight: bold;margin:30px;">Review</h1>
+        <span style="letter-spacing:4px;word-spacing:3px;">
+            <p>Please write your precious Feedback. </p><br>
+
+        </span>
+
+    </div>
+    <div id="container_review">
+
+        <!-- beautify it with what have learnt yet
+    1) add ratings system with css and java
+    2)add what they like and what not
+    3) add what suggestion they have
+    4)add either want to give us oppotunity to serve
+    find out and give input as many and typw requirred at later now it is rough so improve it later
+ -->
+
+        <form action="#" method="get" target="blank" autocomplete="on" onsubmit="alert('Thanks! you give us your feedback.')">
+
+            <!-- auto complete give option to user what he had filled before so use it -->
+            <div id="review" style="display: flex;">
+
+
+                <fieldset class="a1">
+                    <legend style="text-align: center;">
+                        <h1> Feedback: </h1>
+                    </legend>
+                    <div id="text">
+                        <label for="name">Name: <input type="text" name="name" id="name" class="text"
+                                placeholder="Enter your name" required>
+                        </label>
+                        <br><br>
+                        <label for="age">
+                            Age:
+                            <input type="number" name="age" id="age" placeholder="how old you are?">
+
+                        </label>
+                        <br><br>
+                        <span>Gender:
+                            <select id="select">
+                                <option value="gender" aria-readonly="true">Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select></span>
+
+
+                        <br><br>
+                        <label for="email">Email: <input type="email" id="email" name="mail" placeholder="Email address"
+                                class="text" required>
+                        </label>
+                        <br><br>
+                        <label for="mobile">Mobile
+                            <input id="mobile" type="tel" name="mobile" placeholder="Moblie no (optional)" optional>
+                        </label><br><br>
+
+                        <legend>
+                            <h1>Review </h1>
+                        </legend>
+
+                        <div id="textarea" style="padding:5px;">
+                            <label for="like">Tell us What you like abaut us:</label><br>
+                            <textarea id="like" name="like" rows="5" cols="50"></textarea><br><br>
+                            <label for="like">Tell us What improvement you want in us:</label><br>
+                            <textarea id="like" name="like" rows="5" cols="50"></textarea><br><br>
+                            <label for="revi">Give your Suggestions:</label><br>
+                            <textarea cols="50" rows="5"></textarea><br><br>
+                            <h2>Would you like to come back:</h2>
+                            <label for="yes">
+                                <input type="checkbox" id="yes" name="wanna-come-back" value="Yes"> Yes, will love to get back!
+                               
+                            </label><br><br>
+                            <h2>Would you like to suggest our services to your friends:</h2>
+                            <label for="yes_">
+                                <input type="checkbox" id="yes_" name="wanna-refer" value="Yes"> Yes, we will !
+
+
+                            </label>
+                        </div><br><br>
+                        <h2>Ratings:</h2>
+                        <div id="smily" style="display: flex;width: 100%;margin:10px;flex-direction: row;">
+                            <label for="rating">
+                                <svg height="80" width="80">
+                                    <circle cx="50" cy='50' r="25" fill="yellow" stroke="black" stroke-width="1">
+
+                                    </circle>
+                                    <circle cx="40" cy="45" r="4" fill="white" stroke="black" stroke-width="1"></circle>
+                                    <circle cx="60" cy="45" r="4" fill="white" stroke="black" stroke-width="1"></circle>
+                                    <polyline id="smile" points="35,60, 40,65, 45,68, 50,70, 55,68, 60,65, 65,60">
+                                    </polyline>
+                                </svg>
+                                <input id="rating" type="radio" name="rating" value="good">
+                            </label>
+                            </span>
+
+
+
+
+
+
+
+
+                            <label for="rating-">
+                                <svg height="80" width="80">
+                                    <circle cx="50" cy='50' r="25" fill="yellow" stroke="black" stroke-width="1">
+
+                                    </circle>
+                                    <circle cx="40" cy="45" r="4" fill="white" stroke="black" stroke-width="1"></circle>
+                                    <circle cx="60" cy="45" r="4" fill="white" stroke="black" stroke-width="1"></circle>
+                                    <polyline id="smile" points="40,60 40,64  60,64 60,60"></polyline>
+                                </svg>
+                                <input id="rating-" type="radio" name="rating" value="average"><br>
+
+                            </label>
+
+                            <label for="rating_">
+                                <svg height="80" width="80">
+                                    <circle cx="50" cy='50' r="25" fill="yellow" stroke="black" stroke-width="1">
+
+                                    </circle>
+                                    <circle cx="40" cy="45" r="4" fill="white" stroke="black" stroke-width="1"></circle>
+                                    <circle cx="60" cy="45" r="4" fill="white" stroke="black" stroke-width="1"></circle>
+                                    <polyline id="smile"
+                                        points="35,68, 38,67 40,65, 45,62, 50,62, 55,62, 60,65, 62,67 65,68">
+                                    </polyline>
+                                </svg>
+                                <input id="rating" type="radio" name="rating_" value="bad"><br>
+
+                            </label>
+
+                        </div><br><br>
+                        <input type="submit" class="btn" name="submit" value="Sumit">
+                        <input type="reset" class="btn" name="submit" value="Refresh">
+                     </div>   
+                </fieldset>
+            </div>
+        </form>
+
+
+<!-- 
+add place of where reader can see other customers review.
+
+ -->
+
+        <!-- 
+            also check and practice how to modify attributes
+         -->
+        <!-- <img src="jalebi.jpg" id="img">
+<script>
+    
+    document.getElementById("img").src = "mithai2.jpg";
+    // check why by tagname and class name not working,
+
+    //practice all javascript
+    
+</script> -->
+
+    </div>
+
+</body>
+
+</html>
