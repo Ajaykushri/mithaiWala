@@ -1,0 +1,56 @@
+*{padding:0;margin:0;box-sizing: border-box;}
+header{border-radius:0 0 500px ;width:100vw;border:1px solild black;background-image:url(store.jpg),url(jalebi.jpg),url(rusgulla.jpg);background-repeat: no-repeat;background-position-x: left,right,center;background-size: auto 400px,500px 250px ,auto 350px;}/*be creative keep experimentatig as no set rule for perfection*/
+.container{width: 100vw;}
+#h1{font-size:36px;}
+ul{list-style-type: none ; display:flex;}
+nav{width: 100%;height: 65px;background-color: rgba(0,0,0,0.5);position:fixed;z-index: 1;}
+ul li{padding:20px;}
+ul li a{text-decoration: none;color:white;}
+ul li a:hover{font-size:17px;text-decoration: underline;color:rgb(251, 255, 16);}
+#brand-container{position:relative;top:100px;padding:10%;display: flex;}
+#welcome_text{margin-right: 100px;font-family:cursive; color:white; text-shadow: 4px 4px 5px black;}
+#wel_{padding:30px;position:absolute;background-color:white;top:100px;right:10vw;border-radius:40px;}
+
+#call_{height:280px;background: url(mithai2.jpg);background-size: 50vh;background-repeat: no-repeat;font-size:20px;background-size: cover;width:500px;margin:4vw; padding:3vw;color:rgba(7, 250, 177, 0.9);
+padding-top:160px;padding-left:100px;text-shadow: 3px -3px 2px black;position:relative;bottom:20px;}
+.btn{background-color: red;color:white;}
+main{display:grid;padding:10px;}
+#special{display: flex; text-align: center;overflow-x: auto;}
+figure{padding:10px;}
+#reason{border:1px solid black;box-shadow: 6px 5px 8px gray;width:95%;margin: auto; padding:6vw;}
+.why{box-shadow: 4px 5px 6px gray;border-radius:12px;}
+.why:hover,figure:hover{border:1px solid black;box-shadow: -4px -5px -6px rgb(173, 126, 126);border-radius:22px;background-color: blanchedalmond;}
+.btn{width: 150px;border-radius:9px 2px;height:30px;margin:10px;font-family: cursive;font-size: 20px;}
+.btn:hover{background-color: rgb(10, 253, 43);border-radius:10px;color:black}
+
+#sinc{letter-spacing:4px;word-spacing:3px;}
+#container_about{box-shadow:5px 6px 4px gray;border: 1px solid black;}
+#since{color:white;height:250px;text-align: center; font-family: fantasy;background-image:url(store.jpg),url(jalebi.jpg),url(rusgulla.jpg);border-radius: 0%  0% 50% 0% ;background-repeat: no-repeat;background-position-x: left,right,center;background-size: auto 400px,500px 250px ,auto 350px;text-shadow: 3px 3px 3px black,5px 5px 3px whitesmoke;}
+#who,#speciality,#sell{text-align: justify; margin:20px;font-family:verdana;letter-spacing:2px;text-indent: 50px;line-height:28px ;}
+
+/*review form*/
+#container_review{padding:20px;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+.a1{border-radius:10px;padding:5px;margin:20px;}
+#text{ width:90vw;padding-left:30vw;padding-top: 15vh;}
+
+#menu{width: 100%;display:none;height:90vh;overflow-y: auto;position: fixed;top:5vw;left:1px;}
+
+table,td,th{background-color:rgb(245, 119, 119);border-radius:5px;padding:10px;text-align: center;margin:40px;border-right: 1px solid black;border-bottom: 1px solid black;border-collapse: no-collapse;}
+td:hover, th:hover{background-color: blanchedalmond;border-radius:20px;color:brown;font-size:15px;font-family: 'arial black';}
+
+@keyframes slidehori {
+    0%{top:110vh;padding:0px;margin:0px;opacity: 0;width: 85%;}
+    /* 50%{width:50vw;}   */
+    100%{top:1vh;opacity: 1;width: 85%;}  
+}
+.form_input{padding-left:20vw;padding-right: 20vw;width:70vw;}
+.card{box-shadow: 3px 4px 5px grey;margin:10px;border-radius: 0px 20px;height: 90vh;padding:60px;}
+.card:hover{background-color: khaki;border-radius: 30px;}
+.box-shadow{box-shadow: 5px 5px 5px gray;border-radius: 10px;}
+#formWed{display:none;animation-name: slidehori; animation-timing-function: ease-in-out;animation-duration: 3s;animation-iteration-count: 1;animation-fill-mode: forwards; position:fixed;top:1vh;margin:5vw; background-color: gold;border-radius: 20px;padding:7vw;
+     z-index: 1;border: 1px solid gainsboro;overflow-y:auto;}
+
+     #cls{width:20px;float: right;}
+
+
+

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <meta name="author" content="Ajay">
+    <meta name="discription" content="this is a website for a local sweet selling bussiness.">
+    <meta nam="keyword" content="mithai, jalebi, barfi, sweet">
+    <link rel="stylesheet" href="mithaiWala.css">
+    <link rel="icon" href="mithai2.jpg">
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <link rel="stylesheet" href="responsive.css">
+    
+    <!-- refresh will keep refreshing the page so might not be a good user exprience so use when nedded, else in dev time then remove. -->
+
+
+    <!-- not evry site is for global purpose having reach to locality is also must
+    so must check usage of webs and how to optimise. do seo and digital marketing course. this website is to serve local within the city. so must consider local's taste, language, preferences and sites usp. -->
+</head>
+
+<body>
+
+    <!-- follow this chronology 
+        ** first make the project roughly then 
+        see how can practice some of old knowledge.
+         as it is for portfolio so make it as good as possible but do rough first
+         and finally take notes from this web.**
+
+         1)rough
+         2)fill below
+         3)take notes
+         4)evolve the site
+
+         
+        0)frame a seo freindly outlook using htnl and other all chapter. 
+        no new knowledge just practice the old
+        (landing page, about page, contact and review page. 
+        and ordering page. and see if can add more funcitonality.)
+        1) do the HTML 
+        2) then styling, must make all pages look alike and responsive. remove inline css
+        3)then scripting
+        4)then any api(font logo icon language gps ect.)
+        5)insure horizontal scroll don't accure, set container width
+        6) check if can modify content more related to a sweet selling bussiness promotion like offers packages call to action social media handles reviews api etc.
+
+       
+     -->
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" target="blank">Home</a></li>
+            <li><a href="about.html" target="parent">About</a></li>
+            <li><a href="review.html" target="blank">Review us</a></li>
+            <li><a href="bookhtml.html" target="blank">Book Sweets</a></li>
+            <li><a href="weddingBook.html" target="blank">Book for wedding</a></li>
+            <!-- <li><a href="blog.html" target="blank">Blogs</a></li> add it later on with evolution and practice -->
+        </ul>
+    </nav>
+
+    <div class="container" >
+        <header id="header" style="width: 100%;">
+            <div id="brand-container">
+                <span id="welcome_text">
+                    <h1 id="h1">Welcome to MithaiWala</h1>
+                    <p id="p1">We serve delicious and sweet, to delight your moment.</p>
+                </span>
+                <span id="welcome_img" style="height:40px;">
+                    <img id = "wel_"src="download.jpg" alt="A bunch of sweet" height="300px" width="600px">
+                </span>
+            </div>
+        </header>
+        <!-- since a bussiness site must have a call for action button -->
+        <div id="call_">
+
+            <h1>Have delight with us!</h1>
+            <p style="font-size: 20px;color: white;width:350px; background-color: black;">Order and get delicious sweets
+                on a click</p>
+            <button type="button" class="btn"><a href="bookhtml.html" target="blank" style="color: white; text-decoration: none;"> Order now</a> </button>
+        </div>
+        <main>
+            <h2>Our Spaciality!</h2>
+            <div id="special">
+                <figure> 
+                <img src="barfi.jpg" alt="barfi" width="350px" height="200px" >
+                <figcaption>
+                    <h2><i><u> Khoya Barfi </u></i></h2>
+                    <p>&#x20B9 350 rupees per kilogram</p>
+                </figcaption>
+            </figure>
+            <figure> 
+                <img src="jalebi.jpg" alt="jalebi"  width="350px" >
+                <figcaption>
+                    <h2><i><u> Jalebi </u></i></h2>
+                    <p>&#8377 200 rupees  per kilogram</p>
+                </figcaption>
+            </figure>
+            <figure> 
+                <img src="mithai2.jpg" alt="barfi"  width="350px" >
+                <figcaption>
+                    <h2><i><u> Khoya Roll and chocolate cake </u></i></h2>
+                    <p>&#8377 350 rupees per kilogram</p>
+                </figcaption>
+            </figure>
+            <figure> 
+                <img src="rusgulla.jpg" alt="barfi"  width="350px" >
+                <figcaption>
+                    <h2><i><u>GulabJamun </u></i></h2>
+                    <p>&#8377 240 rupees  per kilogram</p>
+                </figcaption>
+            </figure>
+            <figure> 
+                <img src="gujia.jpg" alt="barfi"  width="350px" >
+                <figcaption>
+                    <h2><i><u>Gujia </u></i></h2>
+                    <p>&#8377 400 rupees  per kilogram</p>
+                </figcaption>
+            </figure>
+            <figure> 
+                <img src="laddo.jpg" alt="barfi"  width="350px" >
+                <figcaption>
+                    <h2><i><u>Ladoo </u></i></h2>
+                    <p>&#8377 200 rupees  per kilogram</p>
+                </figcaption>
+            </figure>
+            <figure> 
+                <img src="coconutladdu.jpg" alt="barfi"  width="350px" >
+                <figcaption>
+                    <h2><i><u> Coconutladdu</u></i></h2>
+                    <p>&#8377 260 rupees  per kilogram</p>
+                </figcaption>
+                
+            </figure>
+           
+            </div>
+            
+            <div id="reason">
+            <h2 align="center" style="font-family:cursive;">Why us ?</h5><br><br>
+                <h3>Reasons include:</h3><br><br>
+                <dl >
+                    <span class="dl">
+                        <dt><b>Hygiene: </b></dt>
+                    <dd>Customer's health is our priority. We follow a strict giudline in making, packing and dilivery
+                        of our sweets.
+                        We have regular inspection from food security department and we got top grades for our hygiene
+                        every time. We have got so many awards for the same.</h3><br><br>
+                       
+                        <span id="why">
+                             <h3>Hygiene protocol we follow:</h3>
+                            <ul>
+                             <span class="why">
+                                 <li><img src="sanitzing place.jpg" alt="sanitization" width="250px"
+                                    height="200px"><br>Entire place get sanitized every one hour.</li>
+                             </span>   
+                             <span class="why">
+                                 <li><img src="inspection.jpg" alt="inspection going on" width="250px" height="200px"><br>
+                                The stafs get inspected at regular interval either they follow protocol or not</li>
+                             </span>
+                             <span class="why">
+                                 <li><img src="cook cooking.jpg" alt="cooking" width="250px" height="200px"><br>No one
+                                allowed to enter kitchen without getting into a ppe kit except cook.</li>
+                             </span>
+                             <span class="why">
+                            
+                            <li><img src="dilivery.jpg" alt="home delivering" width="250px" height="200px"><br>From
+                                cooking to manufacturing to delivering to your doors, we insure no human touch.</li>
+                            </span>
+                        </ul>
+                        </span>
+                    </span>
+                    
+                        
+                    <br><br>
+                    <span class="dl"> 
+                    </dd><br>
+                    <dt><b>Fast Delivery: </b></dt>
+                    <dd>Our each branch cover 25 square kilometer from it's location, which make us capable of
+                        dilievering your order withing 30 minutes from your order.
+                        You can track your order live and can pay on delivery. </dd>
+                        <br><br>
+                    </span>
+                    <span class="dl">
+                        <dt><b>Highly Affordable</b></dt>
+                    <dd>We run so many offers which you can choose to get an exciting discount over your purchases.</dd>
+
+                    </span>
+                    
+                </dl>
+            </div>
+        </main>
+        <footer style="text-align: center; background-color: rgb(0, 9, 0,0.4);padding:50px;margin:10px;">
+            <h5 style="font-size: larger;">In case of any inquery please contact us or reach our shop</h5>
+            <p><strong> +091 - 1800 - 1873 -1732</strong> </p><br>
+            <p><a href="mailto:ajal@232.gmail.com">mail on: ajal@232.gmail.com </a></p><br>
+            <address >
+                A-87/24,<br>
+                lodhi road, New Delhi<br>
+                New Delhi - 110045
+            </address>
+
+        </footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book for wedding</title>
+    <meta name="author" content="Ajay">
+    <meta name="discription" content="this is a website for a local sweet selling bussiness. And this is About page.">
+    <meta nam="keyword" content="mithai, jalebi, barfi, sweet">
+    <link rel="icon" href="mithai2.jpg">
+    <!-- <meta http-equiv="refresh" content="10"> -->
+    <link rel="stylesheet" href="mithaiWala.css">
+    <style>
+        @media screen and (max-width:928px){
+            .card{height: 70vh;}
+            *{overflow-x: hidden;}
+            #formWed{overflow-y: auto;}
+            .btn{overflow-y: hidden;margin-right: 20vw;}
+            #packages{flex-direction: column;}
+            #btn1{width: 15vw;}
+        }
+
+        @media screen and (max-width:773px){
+            *{overflow-x: hidden;}
+            .card{padding:3vw;}
+            #formWed{overflow-y: auto;}
+            
+        }
+        @media screen and (max-width:658px){
+            *{overflow-x: hidden;}
+            #packages{flex-direction: column;}
+            #formWed{overflow-y: auto;}
+        }
+    </style>
+
+</head>
+<!-- 
+    1)ask for date, value, ordersize, show them menu with wedding menu for sweets,different 
+    packages for different price range different plate rate, ask for physical meeting and payment and advance and also give terms and services.
+ -->
+
+<body>
+    <div id="since">
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" target="blank">Home</a></li>
+                <li><a href="about.html" target="parent">About</a></li>
+                <li><a href="review.html" target="blank">Review us</a></li>
+                <li><a href="bookhtml.html" target="blank">Book Sweets</a></li>
+                <li><a href="weddingBook.html" target="blank">Book for wedding</a></li>
+            </ul>
+        </nav><br><br>
+        <h1 align="center" style="font-family: cursive;font-weight: bold;margin:30px;">Wedding Booking Counter</h1>
+    </div>
+    
+    <div id="packages" style="display: flex;margin:10px;">
+        <div class="card">
+            <h1>General Package</h1><br><br>
+            <img class="box-shadow" src="download.jpg" alt="many type of sweets" width="80%"><br><br>
+            <p>This includes Three type of Vege-Gravy, Pulaw, One desert, Two Nan roti, two type of snacks.</p><br><br>
+            <h4>Complementry: </h4>
+            <p>Water</p>
+            <p>One cup cofee</p><br>
+            <h4>Price:</h4 <p>&#8377 200 Rupees per plate.</p><br>
+            <button type="button" id="btn1" class="btn" onclick="document.getElementById('formWed').style.display = 'block';">Book</button>
+        </div>
+        <div class="card">
+            <h1>Special Package</h1><br><br>
+            <img class="box-shadow" src="premium.jpg" alt="many type of sweets" width="80%"><br><br>
+            <p>This includes Five type of Vege-Gravy, Pulaw, Dhahi-Bhalla, Three desert, Five Nan roti, Five type of
+                snacks.</p><br><br>
+            <h4>Complementry: </h4>
+            <p>Water</p>
+            <p>Two cup cofee</p><br>
+            <h4>Price:</h4>
+            <p>&#8377 400 Rupees per plate.</p><br>
+            <button type="button"  onclick="document.getElementById('formWed').style.display = 'block';"  class="btn">Book</button>
+        </div>
+        <div class="card">
+            <h1>Premium Package</h1><br><br>
+            <img class="box-shadow" src="special package.jpg" alt="many type of sweets" height="30%"
+                width="80%"><br><br>
+            <p>This includes Eight or more type of Vege-Gravy, Pulaw and weg-biryani, Non-veg dish, Six deserts, Six Nan
+                roti, Eight type of snacks.</p><br><br>
+            <h4>Complementry: </h4>
+            <p>Water</p>
+            <p>Five cup cofee</p><br>
+            <h4>Price:</h4>
+            <p>&#8377 1000 Rupees per plate.</p><br>
+            <button type="button" onclick="document.getElementById('formWed').style.display = 'block';" class="btn">Book</button>
+        </div>
+    </div>
+    <div id="formWed">
+        <form action="#" method="get" name="form2" autocomplete="off" id="f2">
+            <button type="button" id="cls" onclick="document.getElementById('formWed').style.display = 'none';" class="btn">X</button><br>
+
+            <label for="packages">
+                Select Package:
+                <input type="text" id="packages" name="packages" list="pack" required>
+                <datalist id="pack">
+                    <option value="General Package"></option>
+                    <option value="Special Package"></option>
+                    <option value="Premium Packge"></option>
+                </datalist>
+            </label>
+            <br><br>
+            <label for="plate">
+                How many Plates: <input type="number" id="plate" name="plate_" max="1500" min="50" required>
+            </label><br><br>
+            <label form="price">
+                Price: <input type="text" id="price" name="price" readonly onmouseover="total()">
+            
+            </label>
+            
+            <!-- <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                <input type="range" name="b" value="50" /> +
+                <input type="number" name="a" value="10" /> =
+                <output name="result">60</output>
+                </form> -->
+
+                <!-- this is all of output take form and name and form take it as oninput name.value = name.value*name.value -->
+            <br><br>
+            <label for="Date">
+
+                Date of Booking:
+                <input type="datetime-local" id="Date" name="date" required>
+            </label><br><br>
+
+            <label for="time">
+                Tell Time Slot: <br><br>Starting-Time <input type="time" id="time" name="time" required><br><br>
+                Ending-Time <input type="time" id="time-end" name="time" required>
+
+            </label><br><br>
+            <label for="vanue">
+                Vanue: <input type="text" id="vanue" name="vanue" required>
+            </label>
+            <br><br>
+            <label for="contact">
+                Contact no. : <input type="tel" id="contact" name="contact" required>
+            </label>
+            <br><br>
+            <label for="email">
+                Email: <input type="email" id="email" name="mailid" required>
+            </label><br><br>
+
+            <button type="submit" class="btn"> Submit</button><button type="reset" class="btn"> Refresh</button>
+
+            <span id="alert">
+                <p>** Please provide an active contact no and email address, you will get a call and a mail to confirm
+                    booking**</p>
+
+            </span>
+        </form>
+
+    </div>
+    <script>
+               
+        function total(){
+            
+            var package = document.form2.packages.value;
+            var plate = document.form2.plate.value;
+            
+      
+             
+             if(package == 'General Package'){
+                 document.form2.price.value = "INR " + 200*plate + " rupees";
+             }else if(package == 'Special Package'){
+                 document.form2.price.value = 400*plate;
+             }else if(package == 'Premium Package'){
+                 document.form2.price.value = 1000*plate;
+             }
+            
+        }
+    </script>
+</body>
+
+</html>
